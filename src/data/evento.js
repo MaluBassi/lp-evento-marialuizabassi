@@ -51,3 +51,22 @@ export const ingressos = [
   'Caminhada — R$ 40',
   'Kids — R$ 25',
 ]
+
+export const perguntas = [
+  {
+    id: 'faq-1',
+    pergunta: 'Preciso de atestado médico?',
+    resposta: 'Não é obrigatório, mas é recomendado.',
+  },
+  {
+    id: 'faq-2',
+    pergunta: 'Tem guarda-volumes?',
+    resposta: 'Sim, na tenda da organização, ao lado da largada.',
+  },
+  {
+    id: 'faq-3',
+    pergunta: 'Posso correr com fone de ouvido?',
+    resposta: 'Pode, com volume baixo, para ouvir os avisos.',
+  },
+]
+

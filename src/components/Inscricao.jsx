@@ -35,10 +35,12 @@ function Inscricao() {
               <span className="font-semibold text-slate-900">Nome completo</span>
               <input
                 type="text"
+                name="nome"
+                autoComplete="name"
                 required
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
-                className="mt-1 block 2.75rem w-full rounded-lg border border-slate-300 px-3"
+                className="mt-1 block min-h-11 w-full rounded-lg border border-slate-300 px-3"
               />
             </label>
 
@@ -46,10 +48,12 @@ function Inscricao() {
               <span className="font-semibold text-slate-900">E-mail</span>
               <input
                 type="email"
+                name="email"
+                autoComplete="email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 block 2.75rem w-full rounded-lg border border-slate-300 px-3"
+                className="mt-1 block min-h-11 w-full rounded-lg border border-slate-300 px-3"
               />
             </label>
 
@@ -58,7 +62,7 @@ function Inscricao() {
               <select
                 value={ingresso}
                 onChange={(e) => setIngresso(e.target.value)}
-                className="mt-1 block 2.75rem w-full rounded-lg border border-slate-300 bg-white px-3"
+                className="mt-1 block min-h-11 w-full rounded-lg border border-slate-300 bg-white px-3"
               >
                 {ingressos.map((opcao) => (
                   <option key={opcao} value={opcao}>
@@ -70,7 +74,7 @@ function Inscricao() {
 
             <button
               type="submit"
-              className="2.75rem w-full cursor-pointer rounded-lg bg-primaria px-6 py-3 font-bold text-white hover:opacity-95"
+              className="min-h-11 w-full cursor-pointer rounded-lg bg-primaria px-6 py-3 font-bold text-white hover:opacity-95"
             >
               Confirmar inscrição
             </button>
@@ -82,3 +86,4 @@ function Inscricao() {
 }
 
 export default Inscricao
+
