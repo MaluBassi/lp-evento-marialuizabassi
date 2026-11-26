@@ -1,22 +1,57 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primaria: #1e3a8a;
-  --color-destaque: #facc15;
-  --color-fundo: #ffffff;
+  --color-primaria: #0B1124;
+  --color-fundo: #070B19;
+  --color-superficie: #0E152B;
+  --color-destaque: #FACC15;
+  --color-energia: #F97316;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #070B19;
+  color: #F8FAFC;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+:focus-visible {
+  outline: 3px solid #FACC15;
+  outline-offset: 3px;
+}
+
+/* Scroll reveal utility */
+.reveal-base {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-}
 
-:focus-visible {
-  outline: 3px solid #facc15;
-  outline-offset: 3px;
+  .reveal-base {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
